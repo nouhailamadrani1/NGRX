@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Poppins&family=Roboto+Condensed&display=swap');
+@import "~datatables.net-dt/css/jquery.dataTables.css";
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.text-font {
+    font-family: 'Fjalla One', sans-serif;
+}
+
+.text-color{
+    color: #242c3f;
+    border-bottom: 4px solid rgb(43, 167, 238);
+    width: fit-content;
+}
+
+.card-menu{
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    background-color: #f3f4f6 !important;
+    border-radius: 15px !important;
+}
+
+.img-form{
+    border-radius: 15px;
+    min-width: 100% !important;
+}
+
+.chip{
+    display: inline-flex;
+    flex-direction: row;
+    background-color: #e5e5e5;
+    border: none;
+    cursor: default;
+    height: 36px;
+    outline: none;
+    padding: 0;
+    font-size: 14px;
+    font-color: #333333;
+    font-family:"Open Sans", sans-serif;
+    white-space: nowrap;
+    align-items: center;
+    border-radius: 16px;
+    vertical-align: middle;
+    text-decoration: none;
+    justify-content: center;
+}
+.chip-head{
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    background-color: #32C5D2;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+    align-items: center;
+    user-select: none;
+    border-radius: 50%;
+    justify-content: center;
+    width: 36px;
+    color: #fff;
+    height: 36px;
+    font-size: 20px;
+    margin-right: -4px;
+}
+.chip-content{
+    cursor: inherit;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    white-space: nowrap;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.main-btn{
+    border-radius: 30px !important;
+    background-color: #003554 !important;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px !important;
+}

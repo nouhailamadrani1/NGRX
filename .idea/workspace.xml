@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="afdd9a3e-cc11-4a49-a77b-ceb79f3c3edc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../task-flow/.jpb/jpb-settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task-flow/src/main/java/com/example/taskflow/controller/TagController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task-flow/src/main/java/com/example/taskflow/controller/TaskController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task-flow/src/main/java/com/example/taskflow/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task-flow/src/main/java/com/example/taskflow/enums/DemandStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task-flow/src/main/java/com/example/taskflow/enums/Priority.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task-flow/src/main/java/com/example/taskflow/enums/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task-flow/src/main/java/com/example/taskflow/enums/TaskStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task-flow/src/main/java/com/example/taskflow/enums/TokenType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task-flow/src/main/java/com/example/taskflow/exception/ErrorResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task-flow/src/main/java/com/example/taskflow/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task-flow/src/main/java/com/example/taskflow/mapper/TagMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task-flow/src/main/java/com/example/taskflow/mapper/TaskMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task-flow/src/main/java/com/example/taskflow/mapper/TokenDemandMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task-flow/src/main/java/com/example/taskflow/mapper/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task-flow/src/main/java/com/example/taskflow/model/dto/TagDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task-flow/src/main/java/com/example/taskflow/model/dto/TaskDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task-flow/src/main/java/com/example/taskflow/model/dto/TokenDemandDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task-flow/src/main/java/com/example/taskflow/model/dto/UserDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task-flow/src/main/java/com/example/taskflow/model/entities/Tag.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task-flow/src/main/java/com/example/taskflow/model/entities/Task.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task-flow/src/main/java/com/example/taskflow/model/entities/TokenDemand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task-flow/src/main/java/com/example/taskflow/model/entities/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task-flow/src/main/java/com/example/taskflow/repository/TagRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task-flow/src/main/java/com/example/taskflow/repository/TaskRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task-flow/src/main/java/com/example/taskflow/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task-flow/src/main/java/com/example/taskflow/service/ITagService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task-flow/src/main/java/com/example/taskflow/service/ITaskService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task-flow/src/main/java/com/example/taskflow/service/IUserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task-flow/src/main/java/com/example/taskflow/service/implementations/TagServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task-flow/src/main/java/com/example/taskflow/service/implementations/TaskServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task-flow/src/main/java/com/example/taskflow/service/implementations/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task-flow/src/main/resources/db/changelog/2023/12/26-01-changelog.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task-flow/src/main/resources/db/changelog/changelog-master.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task_flow/.jpb/jpb-settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task_flow/src/main/java/com/example/task_flow/controller/TagController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task_flow/src/main/java/com/example/task_flow/controller/TaskController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task_flow/src/main/java/com/example/task_flow/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task_flow/src/main/java/com/example/task_flow/enums/DemandStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task_flow/src/main/java/com/example/task_flow/enums/Priority.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task_flow/src/main/java/com/example/task_flow/enums/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task_flow/src/main/java/com/example/task_flow/enums/TaskStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task_flow/src/main/java/com/example/task_flow/enums/TokenType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task_flow/src/main/java/com/example/task_flow/exception/ErrorResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task_flow/src/main/java/com/example/task_flow/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task_flow/src/main/java/com/example/task_flow/mapper/TagMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task_flow/src/main/java/com/example/task_flow/mapper/TaskMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task_flow/src/main/java/com/example/task_flow/mapper/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task_flow/src/main/java/com/example/task_flow/model/dto/TagDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task_flow/src/main/java/com/example/task_flow/model/dto/TaskDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task_flow/src/main/java/com/example/task_flow/model/dto/UserDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task_flow/src/main/java/com/example/task_flow/model/dto/response/TagResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task_flow/src/main/java/com/example/task_flow/model/dto/response/TaskResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task_flow/src/main/java/com/example/task_flow/model/dto/response/UserResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task_flow/src/main/java/com/example/task_flow/model/entities/Tag.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task_flow/src/main/java/com/example/task_flow/model/entities/Task.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task_flow/src/main/java/com/example/task_flow/model/entities/TokenDemand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task_flow/src/main/java/com/example/task_flow/model/entities/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task_flow/src/main/java/com/example/task_flow/repository/TagRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task_flow/src/main/java/com/example/task_flow/repository/TaskRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task_flow/src/main/java/com/example/task_flow/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task_flow/src/main/java/com/example/task_flow/service/ITagService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task_flow/src/main/java/com/example/task_flow/service/ITaskService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task_flow/src/main/java/com/example/task_flow/service/IUserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task_flow/src/main/java/com/example/task_flow/service/implementations/TagServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task_flow/src/main/java/com/example/task_flow/service/implementations/TaskServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task_flow/src/main/java/com/example/task_flow/service/implementations/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task_flow/src/main/resources/db/changelog/2023/12/28-01-changelog.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task_flow/src/main/resources/db/changelog/changelog-master.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.jpb/jpb-settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logfile.2023-12-30.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logfile.2023-12-31.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logfile.2024-01-01.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logfile.2024-01-02.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logfile.2024-01-05.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hs_err_pid15284.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sonar-project.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/task_flow/TaskFlowApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/task_flow/config/SchedulingConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/task_flow/controller/TagController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/task_flow/controller/TaskController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/task_flow/controller/TokenDemandController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/task_flow/controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/task_flow/enums/DemandStatus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/task_flow/enums/Priority.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/task_flow/enums/Role.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/task_flow/enums/TaskStatus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/task_flow/enums/TokenType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/task_flow/exception/ErrorResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/task_flow/exception/GlobalExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/task_flow/mapper/TagMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/task_flow/mapper/TaskMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/task_flow/mapper/TokenDemandMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/task_flow/mapper/UserMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/task_flow/model/dto/TagDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/task_flow/model/dto/TaskDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/task_flow/model/dto/TokenDemandDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/task_flow/model/dto/UserDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/task_flow/model/dto/response/TagResponseDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/task_flow/model/dto/response/TaskResponseDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/task_flow/model/dto/response/TokenDemandResponseDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/task_flow/model/dto/response/UserResponseDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/task_flow/model/entities/Tag.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/task_flow/model/entities/Task.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/task_flow/model/entities/TokenDemand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/task_flow/model/entities/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/task_flow/repository/TagRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/task_flow/repository/TaskRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/task_flow/repository/TokenDemandRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/task_flow/repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/task_flow/service/ITagService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/task_flow/service/ITaskService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/task_flow/service/ITokenDemandService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/task_flow/service/IUserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/task_flow/service/implementations/TagServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/task_flow/service/implementations/TaskServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/task_flow/service/implementations/TokenDemandServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/task_flow/service/implementations/UserServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/2023/12/26-01-changelog.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/2023/12/28-01-changelog.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/2024/01/02-01-changelog.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/2024/01/02-02-changelog.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/2024/01/02-03-changelog.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/changelog-master.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/task_flow/service/implementations/TaskServiceImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/task_flow/service/implementations/TokenDemandServiceImplTest.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="com.haulmont.jpb.JpaLiquibaseChangeLog" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2a5nmMaWFBsTZGAwYrO82cF8l5P" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "C:/Users/Youcode/Desktop/TaskFlow/TaskFlow-backend",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "spring.configuration.checksum": "665b2887ee0649abc6c123561532998d",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.example.task_flow.service.implementations" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.TaskFlowApplication">
+    <configuration name="TaskServiceImplTest.testDeleteTaskChangedTokenDemand" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TaskFlow" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.task_flow.service.implementations.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.task_flow.service.implementations" />
+      <option name="MAIN_CLASS_NAME" value="com.example.task_flow.service.implementations.TaskServiceImplTest" />
+      <option name="METHOD_NAME" value="testDeleteTaskChangedTokenDemand" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TaskServiceImplTest.testDeleteTaskNoPermission" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TaskFlow" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.task_flow.service.implementations.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.task_flow.service.implementations" />
+      <option name="MAIN_CLASS_NAME" value="com.example.task_flow.service.implementations.TaskServiceImplTest" />
+      <option name="METHOD_NAME" value="testDeleteTaskNoPermission" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TaskServiceImplTest.testDeleteTaskSuccessful" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TaskFlow" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.task_flow.service.implementations.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.task_flow.service.implementations" />
+      <option name="MAIN_CLASS_NAME" value="com.example.task_flow.service.implementations.TaskServiceImplTest" />
+      <option name="METHOD_NAME" value="testDeleteTaskSuccessful" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TaskServiceImplTest.testDeleteTaskTaskNotFound (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TaskFlow" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.task_flow.service.implementations.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.task_flow.service.implementations" />
+      <option name="MAIN_CLASS_NAME" value="com.example.task_flow.service.implementations.TaskServiceImplTest" />
+      <option name="METHOD_NAME" value="testDeleteTaskTaskNotFound" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TokenDemandServiceImplTest.processToken" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TaskFlow" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.task_flow.service.implementations.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.task_flow.service.implementations" />
+      <option name="MAIN_CLASS_NAME" value="com.example.task_flow.service.implementations.TokenDemandServiceImplTest" />
+      <option name="METHOD_NAME" value="processToken" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="task_flow" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="task_flow" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TaskFlowApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="TaskFlow" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.task_flow.TaskFlowApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TokenDemandServiceImplTest.processToken" />
+        <item itemvalue="JUnit.TaskServiceImplTest.testDeleteTaskSuccessful" />
+        <item itemvalue="JUnit.TaskServiceImplTest.testDeleteTaskChangedTokenDemand" />
+        <item itemvalue="JUnit.TaskServiceImplTest.testDeleteTaskNoPermission" />
+        <item itemvalue="JUnit.TaskServiceImplTest.testDeleteTaskTaskNotFound (1)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="afdd9a3e-cc11-4a49-a77b-ceb79f3c3edc" name="Changes" comment="" />
+      <created>1703617467258</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1703617467258</updated>
+      <workItem from="1703617468283" duration="13507000" />
+      <workItem from="1703669489332" duration="2832000" />
+      <workItem from="1703771799234" duration="10910000" />
+      <workItem from="1703835743001" duration="636000" />
+      <workItem from="1703847120961" duration="9462000" />
+      <workItem from="1703970237624" duration="5672000" />
+      <workItem from="1704046838195" duration="7735000" />
+      <workItem from="1704106604456" duration="45445000" />
+      <workItem from="1704442166680" duration="5049000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="SpringBootApplicationConfigurationType">
+        <watch expression="tasks.get(0).tokenDemands" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>
