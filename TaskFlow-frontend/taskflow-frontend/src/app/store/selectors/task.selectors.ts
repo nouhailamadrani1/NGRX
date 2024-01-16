@@ -5,22 +5,15 @@ export const selectTaskState = createFeatureSelector<fromTask.TaskState>('tasks'
 
 export const selectTasks = createSelector(
     selectTaskState,
-    fromTask.selectTasks
+    state => state.tasks
 );
 
 export const selectLoading = createSelector(
     selectTaskState,
-    fromTask.selectLoading
+    state => state.loading
 );
 
 export const selectError = createSelector(
     selectTaskState,
-    fromTask.selectError
+    state => state.error
 );
-
-export const TaskSelectors = {
-    selectTaskState,
-    selectTasks,
-    selectLoading,
-    selectError,
-};

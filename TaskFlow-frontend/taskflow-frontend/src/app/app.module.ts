@@ -12,7 +12,6 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { TaskComponent } from './components/task/task.component';
 import { taskReducer } from './store/reducers/task.reducer';
 import { TaskEffects } from './store/effects/task.effects';
-import { TaskFormComponent } from './components/task-form/task-form.component';
 import { FormsModule } from '@angular/forms';
 
 
@@ -22,8 +21,8 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     HomePageComponent,
     NavbarComponent,
-    TaskComponent,
-    TaskFormComponent
+    TaskComponent
+ 
   ],
   imports: [
     BrowserModule,

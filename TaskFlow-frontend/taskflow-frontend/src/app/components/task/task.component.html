@@ -1,76 +1,144 @@
+
 <div class="m-4 p-4">
-  <!-- task.component.html -->
-<div *ngIf="loading$ | async" class="alert alert-info">Loading...</div>
-<div *ngIf="error$ | async as error" class="alert alert-danger">{{ error }}</div>
-<a class="btn btn-primary mt-3" routerLink="form">Create New Task</a>
-<div class="d-flex">vc
-  <div class="flex-fill">
-    <h4 class="mt-3 mb-3">In Progress</h4>
-    <ul *ngIf="(tasks$ | async) as tasks" class="list-group">
-      <ng-container *ngFor="let task of tasks">
-        <li *ngIf="task.status === 'IN_PROGRESS'" class="list-group-item list-group-item-white d-flex justify-content-between align-items-center">
-          <div>
-            <span class="fw-bold">{{ task.title }}</span>
-            <br>
-            <small class="text-success">Start Date: {{ task.startDate | date: 'medium' }}</small>
-            <br>
-            <small>{{ task.description.substring(0, 40) }}...</small>
-          </div>
-          <div>
-            <button class="btn btn-danger btn-sm me-2" (click)="deleteTask(task)">Delete</button>
-            <button class="btn btn-primary btn-sm" (click)="updateTask(task)">Update</button>
-          </div>
-        </li>
-      </ng-container>
-    </ul>
-    <div *ngIf="!hasTasksInProgress()" class="mt-3 text-muted">No tasks in progress.</div>
+
+  
+ <div class="d-flex justify-content-center mt-4 " id="form"  > <form (ngSubmit)="createTask()" class="mb-3 w-75 "  class="shadow p-3 mb-5 bg-body-tertiary rounded">
+  <h5 class="mx-1 my-3">Form Create Task </h5>
+  <div class="d-flex mx-2 "> 
+    
+    <div class="mb-3 w-50 mx-1">
+      <label for="title" class="form-label">Title:</label>
+      <input type="text" id="title" name="title" [(ngModel)]="newTask.title" class="form-control" required>
+    </div>
+    <div class="mb-3 w-50 mx-1 ">
+      <label for="priority" class="form-label">Priority:</label>
+      <select id="priority" name="priority" [(ngModel)]="newTask.priority" class="form-select" required>
+        <option value="HIGH">High</option>
+        <option value="MEDIUM">Medium</option>
+        <option value="LOW">Low</option>
+      </select>
+    </div></div>
+        <div class="mb-3 mx-1">
+          <label for="description" class="form-label">Description:</label>
+          <textarea id="description" name="description" [(ngModel)]="newTask.description" class="form-control" required></textarea>
+        </div>
+      
+     
+      
+     <div class="d-flex mx-2">   <div class="mb-3 w-50 mx-1">
+      <label for="startDate" class="form-label">Start Date:</label>
+      <input type="date" id="startDate" name="startDate" [(ngModel)]="newTask.startDate" class="form-control" required>
+    </div>
+  
+    <div class="mb-3 w-50 mx-1">
+      <label for="dueDate" class="form-label">Due Date:</label>
+      <input type="date" id="dueDate" name="dueDate" [(ngModel)]="newTask.dueDate" class="form-control" required>
+    </div></div>
+      
+     <div class="d-flex mx-2 " >   <div class="mb-3 w-50 mx-1">
+      <label for="createdBy" class="form-label">Created By:</label>
+      <input type="number" id="createdBy" name="createdBy" [(ngModel)]="newTask.createdBy" class="form-control" required>
+    </div>
+  
+    <div class="mb-3 w-50 mx-1">
+      <label for="assignedTo" class="form-label">Assigned To:</label>
+      <input type="number" id="assignedTo" name="assignedTo" [(ngModel)]="newTask.assignedTo" class="form-control" required>
+    </div></div>
+      
+      
+        <button type="submit" class="btn text-white my-3 " style="background-color: #fa37b9;">  Create New Task</button>
+      </form>
+      
+  </div>
+  
+
+  <div *ngIf="loading$ | async" class="alert alert-info">Loading...</div>
+  <div *ngIf="error$ | async as error" class="alert alert-danger">{{ error }}</div>
+ <div class="my-4 shadow p-3 mb-5 bg-body-tertiary rounded  " id="allTask">
+  <h5 class="mx-1 my-3" >All Tasks  </h5>
+
+  <div class="d-flex  ">
+    <!-- Display tasks in progress -->
+    <div class="flex-fill ">
+      <h5 class="mt-3 mb-3 fw-bold text-center">In Progress</h5>
+      <ul *ngIf="(tasks$ | async) as tasks" class="list-group">
+        <ng-container *ngFor="let task of tasks">
+          <li *ngIf="task.status === 'IN_PROGRESS'" class="list-group-item list-group-item-white d-flex justify-content-between align-items-center shadow p-3 mb-5 bg-body-tertiary rounded">
+            <div>
+              <span class="fw-bold my-1">{{ task.title }}</span>
+              <br>
+              <small class="text-success  my-1">Start Date: {{ task.startDate | date: 'medium' }}</small>
+              <br>
+              <small class=" my-1">{{ task.description.substring(0, 30) }}...</small>
+              <br>
+              <button class="btn btn btn-sm text-info fw-bold my-1"   style="background-color: rgb(192, 238, 247);">{{ task.priority }}</button>
+            </div>
+            <div>
+              <button class="btn text-white btn-sm me-2" style="background-color: rgb(250, 51, 51);" (click)="deleteTask(task)">Delete</button>
+              <button class="btn btn-sm text-white" style="background-color: rgb(115, 235, 46);" (click)="updateTask(task)">Update</button>
+            </div>
+          </li>
+        </ng-container>
+      </ul>
+      <div *ngIf="!hasTasksInProgress()" class="mt-3 text-muted">No tasks in progress.</div>
+    </div>
+
+    <!-- Display uncompleted tasks -->
+    <div class="flex-fill mx-3">
+      <h5 class="mt-3 mb-3 fw-bold text-center">Uncompleted</h5>
+      <ul *ngIf="(tasks$ | async) as tasks" class="list-group">
+        <ng-container *ngFor="let task of tasks">
+          <li *ngIf="task.status === 'UNCOMPLETED'" class="list-group-item list-group-item-white d-flex justify-content-between align-items-center shadow p-3 mb-5 bg-body-tertiary rounded"  >
+            <div>
+              <span class="fw-bold my-1">{{ task.title }}</span>
+              <br>
+              <small class="text-success  my-1">Start Date: {{ task.startDate | date: 'medium' }}</small>
+              <br>
+              <small class=" my-1">{{ task.description.substring(0, 30) }}...</small>
+              <br>
+              <button class="btn btn btn-sm text-info fw-bold my-1"   style="background-color: rgb(192, 238, 247);">{{ task.priority }}</button>
+            </div>
+            <div>
+              <button class="btn btn-sm me-2 text-white"  style="background-color: rgb(250, 51, 51);" (click)="deleteTask(task)">Delete</button>
+              <button class="btn  btn-sm text-white"  style="background-color: rgb(115, 235, 46);" (click)="updateTask(task)">Update</button>
+            </div>
+          </li>
+        </ng-container>
+      </ul>
+      <div *ngIf="!hasUncompletedTasks()" class="mt-3 text-muted">No uncompleted tasks.</div>
+    </div>
+
+    <!-- Display completed tasks -->
+    <div class="flex-fill">
+      <h5 class="mt-3 mb-3 fw-bold text-center">Completed</h5>
+      <ul *ngIf="(tasks$ | async) as tasks" class="list-group">
+        <ng-container *ngFor="let task of tasks">
+          <li *ngIf="task.status === 'COMPLETED'" class="list-group-item list-group-item-white d-flex justify-content-between align-items-center shadow p-3 mb-5 bg-body-tertiary rounded">
+            <div>
+              <span class="fw-bold my-1">{{ task.title }}</span>
+              <br>
+              <small class="text-success  my-1">Start Date: {{ task.startDate | date: 'medium' }}</small>
+              <br>
+              <small class=" my-1">{{ task.description.substring(0, 30) }}...</small>
+              <br>
+              <button class="btn btn btn-sm text-info fw-bold my-1"   style="background-color: rgb(192, 238, 247);">{{ task.priority }}</button>
+            </div>
+            <div class="">
+              <button class="btn text-white btn-sm me-2"  style="background-color: rgb(250, 51, 51);" (click)="deleteTask(task)">Delete</button>
+              <button class="btn btn btn-sm text-white"  style="background-color: rgb(115, 235, 46);" (click)="updateTask(task)">Update</button>
+            </div>
+          </li>
+        </ng-container>
+      </ul>
+      <div *ngIf="!hasCompletedTasks()" class="mt-3 text-muted">No completed tasks.</div>
+    </div>
   </div>
 
-  <div class="flex-fill mx-3">
-    <h4 class="mt-3 mb-3">Uncompleted</h4>
-    <ul *ngIf="(tasks$ | async) as tasks" class="list-group">
-      <ng-container *ngFor="let task of tasks">
-        <li *ngIf="task.status === 'UNCOMPLETED'" class="list-group-item list-group-item-white d-flex justify-content-between align-items-center">
-          <div>
-            <span class="fw-bold">{{ task.title }}</span>
-            <br>
-            <small class="text-success">Start Date: {{ task.startDate | date: 'medium' }}</small>
-            <br>
-            <small>{{ task.description.substring(0, 40) }}...</small>
-          </div>
-          <div>
-            <button class="btn btn-danger btn-sm me-2" (click)="deleteTask(task)">Delete</button>
-            <button class="btn btn-primary btn-sm" (click)="updateTask(task)">Update</button>
-          </div>
-        </li>
-      </ng-container>
-    </ul>
-    <div *ngIf="!hasUncompletedTasks()" class="mt-3 text-muted">No uncompleted tasks.</div>
-  </div>
-
-  <div class="flex-fill">
-    <h4 class="mt-3 mb-3">Completed</h4>
-    <ul *ngIf="(tasks$ | async) as tasks" class="list-group">
-      <ng-container *ngFor="let task of tasks">
-        <li *ngIf="task.status === 'COMPLETED'" class="list-group-item list-group-item-white d-flex justify-content-between align-items-center">
-          <div>
-            <span class="fw-bold">{{ task.title }}</span>
-            <br>
-            <small class="text-success">Start Date: {{ task.startDate | date: 'medium' }}</small>
-            <br>
-            <small>{{ task.description.substring(0, 40) }}...</small>
-          </div>
-          <div>
-            <button class="btn btn-danger btn-sm me-2" (click)="deleteTask(task)">Delete</button>
-            <button class="btn btn-primary btn-sm" (click)="updateTask(task)">Update</button>
-          </div>
-        </li>
-      </ng-container>
-    </ul>
-    <div *ngIf="!hasCompletedTasks()" class="mt-3 text-muted">No completed tasks.</div>
+  <div *ngIf="deletedTaskId$ | async as deletedTaskId">
+    <p *ngIf="deletedTaskId !== null">
+      Task with ID {{ deletedTaskId }} has been deleted successfully!
+    </p>
   </div>
 </div>
 
-
-
-</div>
+ </div>

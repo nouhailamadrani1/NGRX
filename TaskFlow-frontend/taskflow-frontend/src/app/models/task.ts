@@ -1,6 +1,4 @@
-import { Tag } from "./tag";
-import { TokenDemand } from "./token-demand";
-import { User } from "./user";
+
 
 export interface Task {
     id: number;
@@ -9,9 +7,9 @@ export interface Task {
     priority: string;
     startDate: string;
     dueDate: string;
-    createdBy: User;
-    assignedTo: User;
+    createdBy: number;
+    assignedTo: number;
     status: string;
-    tags: Tag[];
-    tokenDemands: TokenDemand[];
+    tagIds: [1,2];
+
 }

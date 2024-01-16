@@ -12,10 +12,40 @@ export class TaskEffects {
     loadTasks$ = createEffect(() => this.actions$.pipe(
         ofType(TaskActions.loadTasks),
         mergeMap(() => this.taskService.getAllTasks()
-        .pipe(
-            map(tasks => TaskActions.loadTasksSuccess({ tasks })),
-            catchError(error => of(TaskActions.loadTasksFailure({ error })))
+            .pipe(
+                map(tasks => TaskActions.loadTasksSuccess({ tasks })),
+                catchError(error => of(TaskActions.loadTasksFailure({ error })))
+            )
         )
+    ));
+
+    addTask$ = createEffect(() => this.actions$.pipe(
+        ofType(TaskActions.addTask),
+        mergeMap(({ task }) => this.taskService.createTask(task)
+            .pipe(
+                map(newTask => TaskActions.addTaskSuccess({ task: newTask })),
+                catchError(error => of(TaskActions.addTaskFailure({ error })))
+            )
+        )
+    ));
+
+    updateTask$ = createEffect(() => this.actions$.pipe(
+        ofType(TaskActions.updateTask),
+        mergeMap(({ task }) => this.taskService.updateTask(task)
+            .pipe(
+                map(updatedTask => TaskActions.updateTaskSuccess({ task: updatedTask })),
+                catchError(error => of(TaskActions.updateTaskFailure({ error })))
+            )
+        )
+    ));
+
+    deleteTask$ = createEffect(() => this.actions$.pipe(
+        ofType(TaskActions.deleteTask),
+        mergeMap(({ taskId }) => this.taskService.deleteTask(taskId)
+            .pipe(
+                map(() => TaskActions.deleteTaskSuccess({ taskId })),
+                catchError(error => of(TaskActions.deleteTaskFailure({ error })))
+            )
         )
     ));
 }
